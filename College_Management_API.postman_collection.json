@@ -1,0 +1,55 @@
+{
+	"info": {
+		"_postman_id": "c1234567-89ab-cdef-0123-456789abcdef",
+		"name": "College Management System API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Dashboard Stats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/reports/dashboard",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8080",
+					"path": ["api", "reports", "dashboard"]
+				}
+			}
+		},
+		{
+			"name": "Get All Students",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/students",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8080",
+					"path": ["api", "students"]
+				}
+			}
+		},
+		{
+			"name": "Create Student",
+			"request": {
+				"method": "POST",
+				"header": [{"key": "Content-Type", "value": "application/json"}],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"studentId\": \"STU1004\",\n  \"name\": \"Alex Turner\",\n  \"email\": \"alex.t@student.edu\",\n  \"phone\": \"9876543290\",\n  \"year\": \"Year 1\",\n  \"address\": \"Main St, City\",\n  \"department\": {\"id\": 1}\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/students",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8080",
+					"path": ["api", "students"]
+				}
+			}
+		}
+	]
+}
